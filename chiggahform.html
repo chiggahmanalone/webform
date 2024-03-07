@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .form-container {
+            background-color: #fff;
+            box-shadow: 5px 10px #c29f16;
+            border-radius: 2px;
+            padding: 20px;
+            width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+        
+        .form-group.subject label {
+            margin-bottom: 10px;
+        }
+        
+        .form-group.subject input {
+            margin-bottom: 10px;
+        }
+        
+        button {
+            background-color: #116688;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        button.cancel {
+            background-color: rgb(149, 169, 182);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form>
+            <h1>Register form</h1>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group subject">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div>
+                <button type="button" class="cancel" onclick="cancelForm()">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function cancelForm() {
+
+            alert("Form cancelled!");
+        }
+    </script>
+</body>
+
+</html>
